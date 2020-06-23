@@ -1,7 +1,3 @@
 {
-    "full_name": "Jon Atkinson",
-    "email": "jon@jonatkinson.co.uk",
-    "github_username": "jonatkinson",
-    "repo_name": "flask-serverless",
-    "open_source_license": ["MIT license"]
-  }
+    "repo_name": "flask-serverless"
+}   
