@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is a [`cookiecutter`]() template for creating a [`serverless`]() application with [`Flask`](), with a custom domain.
+This is a [`cookiecutter`](https://github.com/cookiecutter/cookiecutter) template for creating a [`serverless`](https://github.com/serverless/serverless) application with [`Flask`](https://github.com/pallets/flask), with a custom domain.
 
 `serverless` will handle creating the necessary resources in AWS:
 
@@ -19,7 +19,6 @@ If you want to use a custom domain, you should have provisioned a certificate in
 First, clone this repository with cookiecutter.
 
     cookiecutter gh:jonatkinson/flask-serverless
-
 
 ## Todo
 
