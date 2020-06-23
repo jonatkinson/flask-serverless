@@ -20,6 +20,17 @@ First, clone this repository with cookiecutter.
 
     cookiecutter gh:jonatkinson/flask-serverless
 
+Now, enter the repository (your name may have changed), and initialise:
+
+    cd flask-serverless
+    npm install
+    serverless login
+
+Finally, create the domain (this can take 15 minutes or so), and deploy the application.
+
+    serverless create_domain
+    serverless deploy
+
 ## Todo
 
 Currently, this is a very early stage repository; there is a lot of opportunity to expand the use of cookiecutter variables throughout. For now, search for the word 'example' in the repository to find the right places to customise.
