@@ -1,0 +1,35 @@
+service: web
+app: example
+org: exampleserverless
+
+plugins:
+  - serverless-domain-manager
+  - serverless-python-requirements
+  - serverless-wsgi
+
+provider:
+  name: aws
+  runtime: python3.7
+  stage: dev
+  region: us-east-1
+
+custom:
+  wsgi:
+    app: src.app.app
+    packRequirements: false
+  pythonRequirements:
+    dockerizePip: non-linux
+  customDomain:
+    domainName: example.com
+    certificateArn: 'arn:aws:acm:us-east-1:xxxxxxxxxxxx:certificate/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+    
+functions:
+  app:
+    handler: wsgi_handler.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+    
